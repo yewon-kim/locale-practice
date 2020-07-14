@@ -1,5 +1,4 @@
 from flask import Flask, render_template, jsonify, request
-from babel import numbers, dates
 from datetime import date, datetime, time
 from flask_babel import Babel, format_decimal, format_date, gettext
 
