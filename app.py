@@ -9,8 +9,8 @@ babel = Babel(app)
 
 @babel.localeselector
 def get_locale():
-    return 'es'
-    # return request.accept_languages.best_match(['en', 'es', de'])
+    # return 'es'
+    return request.accept_languages.best_match(['en', 'es', 'de', 'ko'])
 
 @app.route('/')
 def index():
