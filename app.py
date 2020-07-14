@@ -18,12 +18,16 @@ def index():
 
     num = format_decimal(12345)
 
-    d = date(2020, 7, 13)
+    d = datetime.fromtimestamp(1594460958.12345)
 
     day = format_date(d)
 
-    results = {'num' : num, 'date' : day}
-    return render_template('index.html', results = results, anthony = anthony)
+    results = {
+        'num' : num, 
+        'date' : day, 
+        'anthony' : anthony
+    }
+    return render_template('index.html', results = results)
 
 if __name__ == '__main__':  
     app.run('0.0.0.0', port=5000, debug=True)
