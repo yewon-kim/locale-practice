@@ -9,12 +9,12 @@ babel = Babel(app)
 
 @babel.localeselector
 def get_locale():
-    return 'zh'
-    # return request.accept_languages.match(['en', 'es', de'])
+    return 'es'
+    # return request.accept_languages.best_match(['en', 'es', de'])
 
 @app.route('/')
 def index():
-    anthony = gettext('Anthony')
+    anthony = gettext(u'Anthony')
 
     num = format_decimal(12345)
 
